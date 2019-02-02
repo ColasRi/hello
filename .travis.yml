@@ -5,4 +5,4 @@ compiler:
   - gcc
 
 script:
-  - ${CC} -o hello hello.cpp
+  - ${CXX} -o hello hello.cpp
