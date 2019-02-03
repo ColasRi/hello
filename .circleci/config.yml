@@ -22,4 +22,4 @@ jobs:
           command: make
       - run:
           name: Say hi
-          command: hello
+          command: ./hello
