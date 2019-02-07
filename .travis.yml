@@ -1,8 +1,15 @@
-language: cpp
+sudo: required
 
-compiler:
-  - clang
-  - gcc
+language: generic
+
+services:
+- docker
+
+os:
+- linux
+
+before_install:
+- docker pull hawcobservatory/hawcbuild:c-6
 
 script:
-  - ${CXX} -o hello hello.cpp
+- ${CXX} -o hello hello.cpp
