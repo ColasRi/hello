@@ -12,4 +12,5 @@ before_install:
 - docker pull hawcobservatory/hawcbuild:c-6
 
 script:
-- ${CXX} -o hello hello.cpp
+- pwd
+  ls -al
