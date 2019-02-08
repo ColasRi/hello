@@ -13,4 +13,5 @@ before_install:
 
 script:
 - pwd
-- ls -al
+- which make
+- docker run hawcobservatory/hawcbuild:c-6 /bin/bash -c "which bash" 
