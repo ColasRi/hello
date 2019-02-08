@@ -18,6 +18,6 @@ script:
 - echo ${TRAVIS_BUILD_DIR}
 - docker run \
              -e TRAVIS_BUILD_DIR \
-             -v ${TRAVIS_BUILD_DIR}:${TRAVIS_BUILD_DIR} \
+             -v "${TRAVIS_BUILD_DIR}:${TRAVIS_BUILD_DIR}" \
              hawcobservatory/hawcbuild:c-6 \
              /bin/bash -c "which xcdf" 
