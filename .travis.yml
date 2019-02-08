@@ -14,4 +14,4 @@ before_install:
 script:
 - pwd
 - which cmake
-- docker run hawcobservatory/hawcbuild:c-6 /bin/bash -c "which cmake" 
+- docker run hawcobservatory/hawcbuild:c-6 /bin/bash -c "which xcdf" 
