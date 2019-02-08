@@ -15,6 +15,6 @@ script:
 - pwd
 - which cmake
 - echo $TRAVIS_BUILD_DIR
-- docker run -e TRAVIS_BUILD_DIR -v "${TRAVIS_BUILD_DIR}:${TRAVIS_BUILD_DIR}" hawcobservatory/hawcbuild:c-6 /bin/bash -c "which xcdf" 
+- docker run -e TRAVIS_BUILD_DIR -v "${TRAVIS_BUILD_DIR}:${TRAVIS_BUILD_DIR}" hawcobservatory/hawcbuild:c-6 /bin/bash -c "echo ${TRAVIS_BUILD_DIR}; ls -l ${TRAVIS_BUILD_DIR}; pwd; ls -l; which xcdf" 
 #              -e TRAVIS_BUILD_DIR \
 #              -v "${TRAVIS_BUILD_DIR}:${TRAVIS_BUILD_DIR}" \
