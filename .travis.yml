@@ -13,5 +13,5 @@ before_install:
 
 script:
 - pwd
-- which make
-- docker run hawcobservatory/hawcbuild:c-6 /bin/bash -c "which bash" 
+- which cmake
+- docker run hawcobservatory/hawcbuild:c-6 /bin/bash -c "which cmake" 
