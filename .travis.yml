@@ -13,4 +13,4 @@ before_install:
 
 script:
 - pwd
-  ls -al
+- ls -al
