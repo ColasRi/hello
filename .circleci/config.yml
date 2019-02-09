@@ -3,6 +3,9 @@ jobs:
   build:
     docker:
       - image: hawcobservatory/hawcbuild:c-6scl
+        environment:
+          PATH: "/opt/rh/rh-git29/root/usr/bin:/opt/rh/python27/root/usr/bin:/hawc/install/External/photospline/1.1.0/bin:/hawc/install/External/healpix-cxx/3.31/bin:/hawc/install/External/xcdf/3.00.01/bin:/hawc/install/cmake/3.7.2/bin:/hawc/install/External/root/5.34.36/bin:/hawc/install/External/gsl/2.2.1/bin:/hawc/install/cmake/2.8.12/bin:/hawc/install/External/fftw/3.3.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+          PYTHONPATH: "/hawc/install/External/xcdf/3.00.01/lib:/hawc/install/External/root/5.34.36/lib/root"
     steps:
       - run:
           name: Which Git?
