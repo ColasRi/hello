@@ -2,6 +2,10 @@ sudo: required
 
 language: generic
 
+# Specify python for lgtm
+python:
+- "2.7"
+
 services:
 - docker
 
