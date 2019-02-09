@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: hawcobservatory/hawcbuild:c-6
+      - image: hawcobservatory/hawcbuild:c-6scl
     steps:
       - checkout
 #       - run:
