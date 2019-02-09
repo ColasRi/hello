@@ -7,6 +7,12 @@ jobs:
       - run:
           name: Which Git?
           command: 'git --version && which git'
+      - run:
+          name: SCL
+          command: 'scl enable rh-git29 bash'
+      - run:
+          name: Which Git?
+          command: 'git --version && which git'
       - checkout
 #       - run:
 #           name: Installing SUDO
