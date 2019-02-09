@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: hawcobservatory/hawcbuild:c-6scl
+      - command: 'scl enable rh-git29 bash'
     steps:
       - run:
           name: Which Git?
