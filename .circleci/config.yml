@@ -23,21 +23,18 @@ jobs:
             pwd
             env | sort
             ls -al
-            cd build
-            ls -al
-            ps auxwww
       - run:
           name: CMake
           command: |
-            cd /root/project/build
+            cd /root/project
             cmake .
       - run:
           name: Make
           command: |
-            cd /root/project/build
+            cd /root/project
             make -j3
       - run:
           name: Tests
           command: |
-            cd /root/project/build
+            cd /root/project
             make test
