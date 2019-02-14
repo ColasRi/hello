@@ -24,6 +24,11 @@ jobs:
 #           name: Install CMAKE
 #           command: 'apt-get update && sudo apt-get install -y cmake'
       - run:
+          name: Get some info
+          command: |
+              echo -n "Where am I? " && pwd
+              echo 'ls' && ls -al
+      - run:
           name: Compile 0
           command: cmake .
       - run:
