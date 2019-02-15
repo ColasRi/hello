@@ -38,5 +38,10 @@ jobs:
           command: |
             cd /root/project
             make test
+            ./MyProject
             pip install pyyaml cpp-coveralls
-            coveralls --exclude src/hello.cpp --exclude src/test --gcov-options '\-lp'
+            coveralls --exclude src/test --gcov-options '\-lp'
+            pip install codecov
+            export CODECOV_TOKEN="dc9d0a0d-f97f-4256-888e-c32cca547bca"
+            . get_code_cov.sh
+            codecov
