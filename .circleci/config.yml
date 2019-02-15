@@ -27,14 +27,16 @@ jobs:
           name: CMake
           command: |
             cd /root/project
-            cmake .
+            cmake . -DCMAKE_BUILD_TYPE=DEBUG
       - run:
           name: Make
           command: |
             cd /root/project
             make -j3
       - run:
-          name: Tests
+          name: Tests and coverage
           command: |
             cd /root/project
             make test
+            pip install cpp-coveralls
+            coveralls --exclude src/hello.cpp --exclude src/test --gcov-options '\-lp'
