@@ -38,5 +38,5 @@ jobs:
           command: |
             cd /root/project
             make test
-            pip install yaml cpp-coveralls
+            pip install pyyaml cpp-coveralls
             coveralls --exclude src/hello.cpp --exclude src/test --gcov-options '\-lp'
