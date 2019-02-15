@@ -4,3 +4,12 @@
 
 # hello
 Just testing, obviously. 
+
+```bash
+# coveralls
+pip install cpp-coveralls
+cmake .
+make
+make test
+coveralls --exclude src/hello.cpp --exclude src/test --gcov-options '\-lp'
+```
